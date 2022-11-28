@@ -1,0 +1,536 @@
+@font-face {
+    font-family: 'Vividly';
+    src: url('../fonts/Vividly-Regular.otf');
+}
+
+body {
+    font-family: 'Vividly';
+}
+
+/* root */
+:root {
+    --font-xxl: 72px;
+    --font-xl: 64px;
+    --font-lg: 48px;
+    --font-3md: 36px;
+    --font-md: 24px;
+    --font-2md: 20px;
+    --font-sm: 18px;
+    --font-xsm: 14px;
+    /* COLORS  */
+    --white: #FFFFFF;
+    --brown: #93471D;
+    --black: #000000;
+    --black-400: #4D4D4D;
+    --green-400: #8CBC35;
+    --brown-500: #FFD44A;
+    --white-07: #F1D7C3;
+}
+
+@media (max-width: 991.98px) {
+    :root {
+        --font-xxl: 60px;
+        --font-xl: 50px;
+        --font-lg: 40px;
+        --font-3md: 30px;
+        --font-md: 20px;
+        --font-2md: 18px;
+        --font-sm: 15px;
+        --font-xsm: 14px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    :root {
+        --font-xxl: 50px;
+        --font-xl: 40px;
+        --font-lg: 30px;
+        --font-3md: 26px;
+        --font-md: 18px;
+        --font-2md: 17px;
+        --font-sm: 15px;
+        --font-xsm: 12px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    :root {
+        --font-xxl: 40px;
+        --font-xl: 30px;
+        --font-lg: 20px;
+        --font-3md: 20px;
+        --font-md: 15px;
+        --font-2md: 14px;
+        --font-sm: 13px;
+        --font-xsm: 10px;
+    }
+}
+
+/*  font Weight */
+.fw-400 {
+    font-weight: 400 !important;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.fw-600 {
+    font-weight: 600 !important;
+}
+
+.fw-700 {
+    font-weight: 700 !important;
+}
+
+/* font size */
+.fs_sm {
+    font-size: var(--font-sm);
+}
+
+.fs_2md {
+    font-size: var(--font-2md);
+}
+
+.fs_md {
+    font-size: var(--font-md);
+}
+
+.fs_3md {
+    font-size: var(--font-3md);
+}
+
+.fs_lg {
+    font-size: var(--font-lg);
+}
+
+.fs_xl {
+    font-size: var(--font-xl);
+}
+
+.fs_xxl {
+    font-size: var(--font-xxl);
+}
+
+.main_heading {
+    font-size: var(--font-xxl);
+    font-weight: 400;
+}
+
+.common_heading {
+    font-size: var(--font-xl);
+    font-size: 400;
+}
+
+.heading {
+    font-size: var(--font-3md);
+    font-weight: 400;
+}
+
+.common_para {
+    font-size: var(--font-md);
+    font-weight: 400;
+}
+
+/*color*/
+.brown {
+    color: var(--brown);
+}
+
+.brown-500 {
+    color: var(--brown-500);
+}
+
+.black {
+    color: var(--black);
+}
+
+.bg-brown {
+    background-color: var(--brown);
+}
+
+/* ===============================   HERO SECITON CSS   ======================================== */
+.hero-section {
+    background: url('../images/herobg.png');
+    background-position: center;
+    background-size: cover;
+    /* height: 90vh; */
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+}
+
+:focus:not(:focus-visible) {
+    outline: 0;
+    box-shadow: none;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link::after {
+    content: " ";
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background-color: black;
+    bottom: -1px;
+    left: 50%;
+    transition: all ease-in-out 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0px;
+}
+
+.nav-link-img {
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-link-img:hover {
+    transform: scale(1.1);
+}
+
+.nav-container {
+    border: 4px solid var(--brown);
+    border-bottom: 8px solid var(--brown);
+    border-radius: 52px;
+    border-radius: 52px;
+}
+
+.nav-btn {
+    padding: 15px 39px;
+    border-radius: 36px;
+    border: none;
+    transition: all .3s ease-in-out;
+}
+
+.nav-container::before {
+    content: url("../images/left-cloud.png");
+    position: absolute;
+    top: 220px;
+    left: -50px;
+}
+
+.nav-container::after {
+    content: url("../images/rigth-cloud.png");
+    position: absolute;
+    top: 200px;
+    right: -40px;
+}
+
+.nav-btn:hover {
+    transform: scale(1.04);
+}
+
+.hero-btn {
+    border: none;
+    padding: 17px 35px;
+    border-radius: 26px;
+    transition: all .3s ease-in-out;
+}
+
+.hero-btn:hover {
+    transform: scale(1.04);
+}
+
+.hero-botom-img {
+    position: absolute;
+    width: 100%;
+    /* height: 200px; */
+    bottom: 0px;
+    right: 0%;
+}
+
+/* ================================ WHAT MAKES US DIFFERENT SECTION START HERE ============================= */
+.differnt-section {
+    background: url("../images/different-bg.png");
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+/*======================================HOW COOL SECTION START FROM HERE===========================--> */
+.cool-card {
+    border: 1px solid #97D0AB;
+    box-shadow: 6px 6px 84px rgba(0, 0, 0, 0.11);
+    border-radius: 14px;
+    transition: all ease-in-out .3s;
+}
+
+.cool-card:hover {
+    transform: translateY(-15px);
+    cursor: pointer;
+}
+
+.cool-card-li-1 {
+    background-color: #97D0AB;
+    border-radius: 8px;
+}
+
+.cool-ul {
+    width: 800px;
+    max-width: 800px;
+}
+
+.cool-card-li-2 {
+    background-color: #88C9DD;
+    border-radius: 8px;
+}
+
+.cool-card-li-3 {
+    background-color: #D4BCEF;
+    border-radius: 8px;
+}
+
+.cool-card-li-4 {
+    background-color: #97D0AB;
+    border-radius: 8px;
+}
+
+.cool-span {
+    background-color: #97D0AB;
+    height: 20px;
+    width: 479px;
+    border-radius: 33px;
+}
+
+.cool-span-2 {
+    width: 435px;
+    background-color: #FFC34D;
+}
+
+.cool-span-3 {
+    width: 395px;
+    background-color: #CFB8EA;
+}
+
+.cool-span-4 {
+    width: 385px;
+    background-color: #88C8DC;
+}
+
+/* ======================================  FEACTURE-SECTION START HERE  ======================================== */
+.feacture-section {
+    background: url('../images/brown-bg-2.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.feacture-para {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: var(--brown);
+    line-height: 55px;
+}
+
+.feacture-para::before {
+    content: url(../images/cloud.png);
+    position: absolute;
+    top: -130px;
+    left: -50px;
+}
+
+/* ============================================= BUBBLY BEAR FOUNDER SECITON START HERE  ================================= */
+.bear-founder-para {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--brown);
+}
+
+/* ============================================  ROAD MAP SECTION START HERE ========================================= */
+.road-map {
+    background: url('../images/road-bg.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.date-card {
+    border-radius: 16px;
+}
+
+
+
+.road-map-circle {
+    padding: 5px 32px;
+    outline: 2px dashed white;
+    outline-offset: 7px;
+    border-radius: 50%;
+}
+
+.road-map-circle::after {
+    content: " ";
+    position: absolute;
+    height: 34px;
+    width: 2px;
+    border-left: dashed 2px white;
+    bottom: -43px;
+    left: 50%;
+}
+
+.road-map-circle-last::after {
+    content: " ";
+    width: 0px;
+    height: 0px;
+}
+
+.comic-para {
+    line-height: 70px;
+}
+
+.opcitay_07 {
+    opacity: 0.7;
+}
+
+@media (max-width: 1200px) {
+    .top-logo {
+        width: 150px;
+    }
+
+    .nav-btn {
+        padding: 9px 20px;
+        border-radius: 26px;
+        border: none;
+    }
+
+    .nav-container::after,
+    .nav-container::before {
+        content: ' ';
+    }
+
+    .differnt-section {
+        background-size: cover;
+    }
+
+    .feacture-para::before {
+        content: " ";
+    }
+}
+
+@media (max-width: 991.98px) {
+    .cool-ul {
+        max-width: 500px;
+    }
+
+    .cool-span {
+        height: 15px;
+        width: 250px;
+        border-radius: 33px;
+    }
+
+    .cool-span-2 {
+        width: 230px;
+    }
+
+    .cool-span-3 {
+        width: 210px;
+    }
+
+    .cool-span-4 {
+        width: 200px;
+    }
+
+    .feacture-para {
+        line-height: 40px;
+    }
+
+    .bear-founder-para {
+        -webkit-text-stroke-width: 2px;
+    }
+
+    .road-map-circle {
+        padding: 5px 25px;
+    }
+
+    .comic-para {
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .hero-btn {
+        border: none;
+        padding: 7px 10px;
+        border-radius: 26px;
+    }
+
+    .cool-ul {
+        /* width: 290px; */
+        max-width: 400px;
+    }
+
+    .cool-span {
+
+        width: 170px;
+        border-radius: 33px;
+    }
+
+    .cool-span-2 {
+        width: 160px;
+    }
+
+    .cool-span-3 {
+        width: 130px;
+    }
+
+    .cool-span-4 {
+        width: 120px;
+    }
+
+    .feacture-section {
+        background-color: #FFC34D;
+    }
+
+    .feacture-para {
+        -webkit-text-stroke-width: 2px;
+        line-height: 33px;
+    }
+}
+
+@media (max-width: 567.98px) {
+    .cool-ul {
+        max-width: 290px;
+    }
+
+    .cool-span {
+
+        width: 125px;
+        border-radius: 33px;
+    }
+
+    .cool-span-2 {
+        width: 100px;
+    }
+
+    .cool-span-3 {
+        width: 90px;
+    }
+
+    .cool-span-4 {
+        width: 90px;
+    }
+
+    .feacture-para {
+        -webkit-text-stroke-width: 1px;
+    }
+
+    .road-map-circle {
+        padding: 5px 20px;
+    }
+
+    .comic-para {
+        line-height: 23px;
+    }
+}
+
+@media (min-width: 1680px) {
+    .hero-botom-img {
+        bottom: -5%;
+    }
+
+    .feacture-para::before {
+        top: -130px;
+        left: -60px;
+    }
+}
